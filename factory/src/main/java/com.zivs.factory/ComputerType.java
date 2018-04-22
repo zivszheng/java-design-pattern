@@ -1,5 +1,5 @@
 package com.zivs.factory;
 
-public enum ComputerEnum {
+public enum ComputerType {
     DEL, MAC, LENOVO;
 }

@@ -8,7 +8,7 @@ package com.zivs.factory;
  */
 public class ComputerFactory {
 
-    public static ComputerProducer production(ComputerEnum computerEnum) {
+    public static ComputerProducer production(ComputerType computerEnum) {
         switch (computerEnum) {
             case DEL:
                 return new DelProducer();
@@ -17,7 +17,7 @@ public class ComputerFactory {
             case LENOVO:
                 return new LenovoProducer();
             default:
-                return null;
+                throw new IllegalArgumentException("ComputerType not supported.");
         }
     }
 }

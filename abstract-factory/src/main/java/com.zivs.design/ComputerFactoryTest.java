@@ -10,9 +10,13 @@ import lombok.extern.slf4j.Slf4j;
 public class ComputerFactoryTest {
 
     public static void main(String[] args) {
-        Computer pc = ComputerFactory.getComputer(new PCFactory("My PC", "8 GB", "500 GB", "2.8 GHz"));
-        Computer server = ComputerFactory.getComputer(new ServerFactory("My Server", "16 GB", "1 TB", "3.1 GHz"));
-        log.info("PC     Config: " + pc);
-        log.info("Server Config: " + server);
+
+        ComputerFactory factory1 = FactoryMaker.makeFactory(FactoryMaker.ComputerTYpe.DEL);
+        log.info(factory1.createPc().getDescription());
+        log.info(factory1.createServer().getDescription());
+
+        ComputerFactory factory2 = FactoryMaker.makeFactory(FactoryMaker.ComputerTYpe.MAC);
+        log.info(factory2.createPc().getDescription());
+        log.info(factory2.createServer().getDescription());
     }
 }

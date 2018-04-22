@@ -9,13 +9,13 @@ package com.zivs.factory;
  */
 public class ComputerFacctoryTest {
     public static void main(String[] args) {
-        ComputerProducer del = ComputerFactory.production(ComputerEnum.DEL);
+        ComputerProducer del = ComputerFactory.production(ComputerType.DEL);
         del.production();
 
-        ComputerProducer mac = ComputerFactory.production(ComputerEnum.MAC);
+        ComputerProducer mac = ComputerFactory.production(ComputerType.MAC);
         mac.production();
 
-        ComputerProducer lenovo = ComputerFactory.production(ComputerEnum.LENOVO);
+        ComputerProducer lenovo = ComputerFactory.production(ComputerType.LENOVO);
         lenovo.production();
     }
 }

@@ -1,8 +1,7 @@
 package com.zivs.design;
 
-public class ComputerFactory {
+public interface ComputerFactory {
+    PC createPc();
 
-    public static Computer getComputer(ComputerAbstractFactory factory) {
-        return factory.createComputer();
-    }
+    Server createServer();
 }
