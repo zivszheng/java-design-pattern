@@ -1,4 +1,4 @@
-package com.zivs.design;
+package com.zivs.abstrat.factory;
 
 import lombok.extern.slf4j.Slf4j;
 

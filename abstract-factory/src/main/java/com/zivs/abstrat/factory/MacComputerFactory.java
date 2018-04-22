@@ -1,4 +1,4 @@
-package com.zivs.design;
+package com.zivs.abstrat.factory;
 
 public class MacComputerFactory implements ComputerFactory {
     @Override
