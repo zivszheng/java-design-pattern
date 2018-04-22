@@ -1,6 +1,4 @@
-package com.zivs.proxy.statical;
-
-import com.zivs.proxy.ComputerVendor;
+package com.zivs.proxy;
 
 public class ComputerProxyTest {
     public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package com.zivs.proxy.dynamic;
 
-import com.zivs.proxy.ComputerSell;
-import com.zivs.proxy.ComputerVendor;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Proxy;

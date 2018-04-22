@@ -1,4 +1,4 @@
-package com.zivs.proxy.statical;
+package com.zivs.proxy;
 
 import com.zivs.proxy.ComputerSell;
 import lombok.extern.slf4j.Slf4j;
