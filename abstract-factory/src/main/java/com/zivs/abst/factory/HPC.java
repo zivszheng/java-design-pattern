@@ -1,4 +1,4 @@
-package com.zivs.abstrat.factory;
+package com.zivs.abst.factory;
 
 public interface HPC {
     String getDescription();
