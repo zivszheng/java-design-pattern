@@ -1,5 +1,5 @@
 package com.zivs.design;
 
-public interface Server {
+public interface HPC {
     String getDescription();
 }

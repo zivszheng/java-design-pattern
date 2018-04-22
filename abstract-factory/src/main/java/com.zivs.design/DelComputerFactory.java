@@ -2,12 +2,12 @@ package com.zivs.design;
 
 public class DelComputerFactory implements ComputerFactory {
     @Override
-    public PC createPc() {
+    public PC createPC() {
         return new DelPC();
     }
 
     @Override
-    public Server createServer() {
-        return new DelServer();
+    public HPC createHPC() {
+        return new DelHPC();
     }
 }

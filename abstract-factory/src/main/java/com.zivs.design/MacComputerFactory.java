@@ -2,12 +2,12 @@ package com.zivs.design;
 
 public class MacComputerFactory implements ComputerFactory {
     @Override
-    public PC createPc() {
+    public PC createPC() {
         return new MacPC();
     }
 
     @Override
-    public Server createServer() {
-        return new MacServer();
+    public HPC createHPC() {
+        return new MacHPC();
     }
 }
