@@ -2,7 +2,7 @@ package com.zivs.singleton;
 
 /**
  * @author zivs.zheng
- * @description: Thread-safe Singleton class （Lazy Loaded）
+ * @description: Thread-safe SimpleSingleton class （Lazy Loaded）
  * @date 2018/4/22 2:09
  */
 public class ThreadSafeSingleton {
@@ -10,7 +10,7 @@ public class ThreadSafeSingleton {
     private static ThreadSafeSingleton instance;
 
     private ThreadSafeSingleton() {
-        // protect against instantiation via reflection
+        // 通过反射防止实例化
         if (instance == null) {
             instance = this;
         } else {
@@ -18,6 +18,7 @@ public class ThreadSafeSingleton {
         }
     }
 
+    // 仅在第一次调用实例时才创建实例，懒加载（Lazy Loaded）
     public static synchronized ThreadSafeSingleton getInstance() {
         if (instance == null) {
             instance = new ThreadSafeSingleton();
