@@ -6,12 +6,12 @@ public class FactoryMaker {
         DEL, MAC;
     }
 
-    public static ComputerFactory makeFactory(ComputerTYpe type) {
+    public static com.zivs.abstrat.factory.ComputerFactory makeFactory(ComputerTYpe type) {
         switch (type) {
             case DEL:
-                return new DelComputerFactory();
+                return new com.zivs.abstrat.factory.DelComputerFactory();
             case MAC:
-                return new MacComputerFactory();
+                return new com.zivs.abstrat.factory.MacComputerFactory();
             default:
                 throw new IllegalArgumentException("ComputerTYpe not supported.");
         }

@@ -1,8 +1,8 @@
 package com.zivs.abstrat.factory;
 
-public class DelPC implements PC{
+public class MacPC implements com.zivs.abstrat.factory.PC {
     @Override
     public String getDescription() {
-        return "I'm del PC";
+        return "I'm mac PC";
     }
 }

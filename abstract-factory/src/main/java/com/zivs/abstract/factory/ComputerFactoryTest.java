@@ -12,11 +12,11 @@ public class ComputerFactoryTest {
 
     public static void main(String[] args) {
 
-        ComputerFactory factory1 = FactoryMaker.makeFactory(FactoryMaker.ComputerTYpe.DEL);
+        com.zivs.abstrat.factory.ComputerFactory factory1 = com.zivs.abstrat.factory.FactoryMaker.makeFactory(com.zivs.abstrat.factory.FactoryMaker.ComputerTYpe.DEL);
         log.info(factory1.createPC().getDescription());
         log.info(factory1.createHPC().getDescription());
 
-        ComputerFactory factory2 = FactoryMaker.makeFactory(FactoryMaker.ComputerTYpe.MAC);
+        com.zivs.abstrat.factory.ComputerFactory factory2 = com.zivs.abstrat.factory.FactoryMaker.makeFactory(com.zivs.abstrat.factory.FactoryMaker.ComputerTYpe.MAC);
         log.info(factory2.createPC().getDescription());
         log.info(factory2.createHPC().getDescription());
     }
