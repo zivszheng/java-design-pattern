@@ -10,6 +10,11 @@ public final class ThreadSafeDoubleCheckLocking {
         }
     }
 
+    /**
+     * 使用 volatile 的主要原因是其另一个特性：禁止指令重排序优化。
+     * 也就是说，在 volatile 变量的赋值操作后面会有一个内存屏障（生成的汇编代码上），
+     * 读操作不会被重排序到内存屏障之前。
+     */
     public static ThreadSafeDoubleCheckLocking getInstance() {
         // 局部变量将性能提高25％
         ThreadSafeDoubleCheckLocking result = instance;
@@ -20,8 +25,6 @@ public final class ThreadSafeDoubleCheckLocking {
                 // 在次将实例赋值给result，以检查它是否由其他线程初始化如果已经被初始化可直接返回。
                 result = instance;
                 if (result == null) {
-                    // The instance is still not initialized so we can safely (no other thread can enter this zone)
-                    // create an instance and make it our singleton instance.
                     // 还没有初始化，所以我们可以安全地(没有其他线程可以进入)创建一个实例。
                     instance = result = new ThreadSafeDoubleCheckLocking();
                 }

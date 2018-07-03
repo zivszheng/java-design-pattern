@@ -10,7 +10,7 @@ public class ThreadSafeSingleton {
     private static ThreadSafeSingleton instance;
 
     private ThreadSafeSingleton() {
-        // 通过反射防止实例化
+        // 防止实例化
         if (instance == null) {
             instance = this;
         } else {
