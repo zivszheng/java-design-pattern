@@ -7,7 +7,7 @@ package com.zivs.proxy.dynamic;
  */
 public interface ComputerSell {
     // 销售
-    public void sell();
+    public void sell(String computer);
     // 补货
     public void add();
 }

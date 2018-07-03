@@ -10,8 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ComputerVendor implements ComputerSell{
     @Override
-    public void sell() {
-        log.info(">>> Sell computer...");
+    public void sell(String computer) {
+        log.info(">>> Sell computer... "+computer);
     }
 
     @Override
